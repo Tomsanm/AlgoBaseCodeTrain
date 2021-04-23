@@ -1,6 +1,6 @@
 package org.twm;
 
-public class PopOrder {
+public class APopOrder {
     /**
      * pop
      */
@@ -8,13 +8,13 @@ public class PopOrder {
     public static void main(String[] args) {
         int[] x = {7,9,1,2,3,0};
         popOrder(x);
-//        showResult(x);
-        for (int i = 10; i >=0 ; --i) {
-            System.out.println(i);
-
-        }
+        showResult(x);
     }
 
+    /** 冒泡排序
+     * 1. 反复：从末尾考虑，每次小循环通过依次交换把最后位置的元素定好。
+     * @param inputArray
+     */
     private static void popOrder(int[] inputArray){
         for (int i = inputArray.length-1; i>=0; i--) {
             boolean swapFlag = false;
@@ -41,7 +41,7 @@ public class PopOrder {
         inputArray[j+1] = temp;
     }
 
-    private static void showResult(int[] x){
+    public static void showResult(int[] x){
         for (int i = 0; i < x.length; i++) {
             System.out.println(x[i]);
         }
